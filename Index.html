@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Site</title>
+	<link rel="stylesheet" type="text/css" href="css\style.css">
+</head>
+<body>
+
+  	<div class="header">
+  		<center><p>NEWS</p></center>
+  	</div>
+  	<div class="main">
+
+  			<div class="data0 data">
+
+  			</div>
+  			<div class="data1 data"></div>
+
+  			<div class="data2 data"></div>
+
+  	</div>
+  	<div class="footer">
+  		<center><p>@SRDRABX</p></center>
+  	</div>
+
+
+</body>
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+$.get( "https://fortnite-api.tresmos.xyz/news?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hY2hvYWxkYW1hdmljZW50ZUBnbWFpbC5jb20iLCJ1c2VySWQiOiI1YmMzMTQ3MzFlNmI5NjUxNzVkYzU4MDMifQ.Z3JQOqpF1AUkNJ9RG3po0EbL6g3Gnlv74QfpVlw4hGE").done(function( data ) {
+
+       for (i=0;i<3;i++){
+       		var content=`
+       			<div class="data_image">
+  					<img width="500" height="250" src="`+data.br[i].image+`">
+  				</div>
+  				<div class="data_content">
+  					<p class="content_title" >
+  						`+data.br[i].title+`
+  					</p>
+  					<p class="content" >`+data.br[i].body+` </p>
+  				</div>
+       		`;
+       		$('.data'+i).append(content);
+
+   		}
+
+   });
+
+</script>
+
+</script>
+</html>
