@@ -71,3 +71,16 @@ body{
 	font-weight: 800;
 	color: black
 }
+
+.popup {
+    font-family: Myfont_content;
+    font-size: 1.8rem;
+    color: #fff;
+    border-radius: 10px;
+    background-color: red;
+    padding: 0.2rem 0.5rem;
+    float: right;
+    position: absolute;
+    right: -15px;
+    top: -5px;
+  }
