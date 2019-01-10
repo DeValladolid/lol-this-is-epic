@@ -34,20 +34,20 @@ for (i=0;i<3;i++){
     if(data.br[i].adspace) {
         var content=`
     <span class="popup">`+data.br[i].adspace+`</span>
-           <img class="card-img-top" src="`+data.br[i].image+`">
+           <img class="data_image" src="`+data.br[i].image+`">
        <div class="card-body">
-   <h5 class="card-title">`+data.br[i].title+`</h5>
-   <p class="card-text">`+data.br[i].body+` </p>
+   <h5 class="content_title">`+data.br[i].title+`</h5>
+   <p class="content">`+data.br[i].body+` </p>
  </div>
    
         `;
     }
     else { 
         var content=`
-           <img class="card-img-top" src="`+data.br[i].image+`">
+           <img class="data_image" src="`+data.br[i].image+`">
        <div class="card-body">
-   <h5 class="card-title">`+data.br[i].title+`</h5>
-   <p class="card-text">`+data.br[i].body+` </p>
+   <h5 class="content_title">`+data.br[i].title+`</h5>
+   <p class="content">`+data.br[i].body+` </p>
  </div>
    
         `;
