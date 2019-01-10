@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @font-face {
     font-family: fortnite-normal;
-    src: url(../fonts/Burbank-Normal.woff);
+    src: url(../font/Burbank-Normal.woff);
   }
 
   @font-face {
     font-family: fortnite-small;
-    src: url(../fonts/Burbank-small.woff);
+    src: url(../font/Burbank-small.woff);
   }
 
 
