@@ -30,23 +30,34 @@
 <script type="text/javascript">
 $.get( "https://api.lazylinks.fr/news").done(function( data ) {
 
-       for (i=0;i<3;i++){
-       		var content=`
-       			<div class="data_image">
-  					<img width="500" height="250" src="`+data.br[i].image+`">
-  				</div>
-  				<div class="data_content">
-  					<p class="content_title" >
-  						`+data.br[i].title+`
-  					</p>
-  					<p class="content" >`+data.br[i].body+` </p>
-  				</div>
-       		`;
-       		$('.data'+i).append(content);
+for (i=0;i<3;i++){
+    if(data.br[i].adspace) {
+        var content=`
+    <span class="popup">`+data.br[i].adspace+`</span>
+           <img class="card-img-top" src="`+data.br[i].image+`">
+       <div class="card-body">
+   <h5 class="card-title">`+data.br[i].title+`</h5>
+   <p class="card-text">`+data.br[i].body+` </p>
+ </div>
+   
+        `;
+    }
+    else { 
+        var content=`
+           <img class="card-img-top" src="`+data.br[i].image+`">
+       <div class="card-body">
+   <h5 class="card-title">`+data.br[i].title+`</h5>
+   <p class="card-text">`+data.br[i].body+` </p>
+ </div>
+   
+        `;
+    }
+        $('.data'+i).append(content);
 
-   		}
+    }
 
-   });
+});
+
 
 </script>
 
